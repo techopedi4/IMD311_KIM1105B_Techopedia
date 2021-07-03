@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+<title>Technopedia</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="navbar.css" rel="stylesheet" type="text/css" media="all">
+<link href="barselect.css" rel="stylesheet" type="text/css" media="all">
+<link href="header.css" rel="stylesheet" type="text/css" media="all">
+<link href="portfolio.css" rel="stylesheet" type="text/css" media="all">
+<link href="footer.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+  <div class="header">
+    <h1>TECHOPEDIA</h1>
+
+    <p><i>The Future is Here!</i></p>
+  </div>
+    <div class="topnav">
+        <a class="active" href="index.html">TECHOPEDIA</a>
+        <a href="bod.html">LEADERSHIPS</a>
+        <a href="typelaptop.html">TYPES OF PC</a>
+        <a href="samsung.html">TYPES OF SMARTPHONES</a>
+        <a href="accessories.html">ACCESSORIES</a>
+        <a href="contactus.html">CONTACT US</a>
+      </div>
+<br><br><br>
+
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+  <h1>The Products</h1>
+  <hr>
+  
+  <h2>Varieties of Choises</h2>
+  
+  <div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" onclick="filterSelection('pcs')"> PCs</button>
+    <button class="btn" onclick="filterSelection('smartphones')"> Smartphones</button>
+    <button class="btn" onclick="filterSelection('accessories')"> Accessories</button>
+  </div>
+  
+  <!-- Portfolio Gallery Grid -->
+  <div class="row">
+    <div class="column pcs">
+      <div class="content">
+        <img src="images/acer3.jpg" alt="PC" style="width:100%">
+        <h4>Pc</h4>
+        <p>Acer Spin 3</p>
+      </div>
+    </div>
+    <div class="column pcs">
+      <div class="content">
+      <img src="images/dell.jpg" alt="PC" style="width:100%">
+        <h4>Pc</h4>
+        <p>Dell Latitude E7240 Notebook</p>
+      </div>
+    </div>
+    <div class="column pcs">
+      <div class="content">
+      <img src="images/hp94.jpeg" alt="PC" style="width:100%">
+        <h4>Pc</h4>
+        <p>HP Elitebook Folio 9470M</p>
+      </div>
+    </div>
+    
+    <div class="column smartphones">
+      <div class="content">
+        <img src="images/oneplus9.jpg" alt="Smartphone" style="width:100%">
+        <h4>Smartphone</h4>
+        <p>Oppo Oneplus 9</p>
+      </div>
+    </div>
+    <div class="column smartphones">
+      <div class="content">
+      <img src="images/samsungs21.jpg" alt="Smartphone" style="width:100%">
+        <h4>Smartphone</h4>
+        <p>Samsung S21</p>
+      </div>
+    </div>
+    <div class="column smartphones">
+      <div class="content">
+      <img src="images/samsung52.jpg" alt="Smartphone" style="width:100%">
+        <h4>Smartphone</h4>
+        <p>Samsung A52</p>
+      </div>
+    </div>
+  
+    <div class="column accessories">
+      <div class="content">
+        <img src="images/keyboard.jpg" alt="keyboard" style="width:100%">
+        <h4>Accessories</h4>
+        <p>Logitech Keyboard</p>
+      </div>
+    </div>
+    <div class="column accessories">
+      <div class="content">
+      <img src="images/logitech.jpg" alt="Mouse" style="width:100%">
+        <h4>Accessories</h4>
+        <p>Logitech Mouse</p>
+      </div>
+    </div>
+    <div class="column accessories">
+      <div class="content">
+      <img src="images/boseear.jpg" alt="Earphones" style="width:100%">
+        <h4>Accessories</h4>
+        <p>Bose Earphones</p>
+      </div>
+    </div>
+    
+  <script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("column");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+    
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+    
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+    
+    
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+    </script>
+      <br><br>
+<!-- END GRID -->
+
+<!-- Columns -->
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br>
+<h2 style="text-align:center">SURF NOW!</h2>
+<div class="columns">
+  <ul class="price">
+    <li class="header">PCs</li>
+    <li>Acer</li>
+    <li>Hp</li>
+    <li>Toshiba</li>
+    <li>Dell</li>
+    
+    <li class="grey"><a href="#" class="button">Surf</a></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header" style="background-color:#04AA6D">Smartphones</li>
+    <li>Oppo</li>
+    <li>Samsung</li>
+    <li>25 Emails</li>
+    <li>25 Domains</li>
+  
+    <li class="grey"><a href="#" class="button">Surf</a></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header">Accessories</li>
+    <li>Logitech</li>
+    <li>Jabra</li>
+    <li>Bose</li>
+    <li>Razer</li>
+    
+    <li class="grey"><a href="#" class="button">Surf</a></li>
+  </ul>
+</div>
+<!-- END Columns -->
+<!--Navigation bar-->
+<div class="navbarr">
+  <ul>
+      <li><a href="mailto:adamghaffar98@gmail.com"><center>Feedback and Recommendations</a></li></center>
+  </ul>
+</div>
+<br>
+
+<!--Footer-->
+<div class="footer">
+  <div class="header">
+      <center><marquee direction = "left"><h1>TECHOPEDIA</h1></marquee></center>
+  </div>
+ <center>&copy; TECHOPEDIA 2021</center>
+</div>
+<embed src="audio/index.mp3" hidden="true"></embed>
+</body>
+</html>

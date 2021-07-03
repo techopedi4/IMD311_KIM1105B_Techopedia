@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Leaderships</title>
+    <link href="header.css" rel="stylesheet" type="text/css" media="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contactus.css">
+</head>
+<link rel="stylesheet" type="text/css" href="style1.css">
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">TECHOPEDIA</label>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="bod.html">Leaderships</a></li>
+          <li><a href="typelaptop.html">Types of PC</a></li>
+          <li><a href="samsung.html">Types of Smartphones</a></li>
+          <li><a href="accessories.html">Accessories</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+  
+        </ul>
+      </nav> 
+    <style>
+        
+    }
+}
+        :root {
+            --d: 700ms;
+            --e: cubic-bezier(0.19, 1, 0.22, 1);
+            --font-sans: "Rubik", sans-serif;
+            --font-serif: "Cardo", serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+        }
+
+        .page-content {
+            display: grid;
+            grid-gap: 1rem;
+            padding: 1rem;
+            margin: 0 auto;
+            font-family: var(--font-sans);
+        }
+
+        @media (min-width: 600px) {
+            .page-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 900px) {
+            .page-content {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .card {
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            padding: 1rem;
+            width: 100%;
+            text-align: center;
+            color: whitesmoke;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (min-width: 600px) {
+            .card {
+                height: 250px;
+                width: 350px;
+                border-radius: 5px;
+            }
+        }
+
+        .card:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 110%;
+            background-size: cover;
+            background-position: 0 0;
+            transition: transform calc(var(--d) * 1.5) var(--e);
+            pointer-events: none;
+        }
+
+        .card:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200%;
+            pointer-events: none;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+            transform: translateY(-50%);
+            transition: transform calc(var(--d) * 2) var(--e);
+        }
+
+        .card:nth-child(1):before {
+    background-image: url(images/ceo.png);
+}
+
+.card:nth-child(2):before {
+    background-image: url(images/cfo.jpeg);
+}
+
+.card:nth-child(3):before {
+    background-image: url(images/corporate.jpg);
+}
+
+.card:nth-child(4):before {
+    background-image: url(images/corporategirl.jpg);
+}
+
+.card:nth-child(5):before {
+    background-image: url(images/lee.jpg);
+}
+
+.card:nth-child(6):before {
+    background-image: url(images/gentleman.jpg);
+}
+
+        .content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 1rem;
+            transition: transform var(--d) var(--e);
+            z-index: 1;
+        }
+
+        .title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        .des {
+            font-family: var(--font-serif);
+            font-size: 1.125rem;
+            font-style: italic;
+            line-height: 1.35;
+        }
+
+        .btn {
+            cursor: pointer;
+            margin-top: 1.5rem;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.65rem;
+            font-weight: bold;
+            letter-spacing: 0.025rem;
+            text-transform: uppercase;
+            color: #111;
+            background-color: #fff;
+            border: none;
+        }
+
+        .btn:hover {
+            background-color: rgb(29, 26, 26);
+            color: #fff;
+            transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+        }
+
+        .btn:focus {
+            outline: 1px dashed yellow;
+            outline-offset: 3px;
+        }
+
+        .content {
+            transform: translateY(calc(100% - 4.5rem));
+        }
+
+        .content>* {
+            opacity: 0;
+            transform: translateY(1rem);
+            transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+        }
+
+        .card:hover {
+            align-items: center;
+        }
+
+        .card:hover:before {
+            background: #333;
+        }
+
+        .card:hover:after {
+            transform: translateY(-50%);
+        }
+
+        .card:hover .content {
+            transform: translateY(0);
+        }
+
+        .card:hover .content>* {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: calc(var(--d) / 8);
+        }
+    </style>
+</head>
+
+<body>
+   
+
+    <main class="page-content">
+        <div class="card">
+            <div class="content">
+                <h2 class="title">Chief Executive Officer</h2>
+                <p class="des">Razak Minhat</p>
+                <button class="btn"><a href="mailto:someone@example.com">Contact</a></button>
+                
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2 class="title">Vice President</h2>
+                <p class="des">Redza Haroon</p>
+                <button class="btn"><a href="mailto:someone@example.com">Contact</a></button>
+                
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2 class="title">Human Resource Officer</h2>
+                <p class="des">Megat Dzul</p>
+                <button class="btn"><a href="mailto:someone@example.com">Contact</a></button>
+                
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2 class="title">Hardware Technologies</h2>
+                <p class="des">Azlina Nawawi</p>
+                <button class="btn"><a href="mailto:someone@example.com">Contact</a></button>
+                
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2 class="title">Retail and Technologies</h2>
+                <p class="des">Lee Jiang</p>
+                <button class="btn"><a href="mailto:someone@example.com">Contact</a></button>
+                
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2 class="title">Corporate Development</h2>
+                <p class="des">Mustapha Kamal</p>
+                <button class="btn"><a href="mailto:someone@example.com">Contact</a></button>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click here to display Date and Time.</button>
+
+<p id="demo"></p>
+
+<h1><b><font face="open sans"><font color="#5AB9EA"><marquee>Mission, Vision & Objectives</marquee></font></font></b></h1>
+<h1><b><center><font face="open sans"><font color="#5AB9EA">Mission</font></font></center></b></h1>
+<ul>
+<li><b><center><font face="open sans"><font color="#5AB9EA">To upgrade the level of device marketing publicly and ensures users got needed and high quality device.</font></font></center></b></li>
+</ul>
+<br>
+<br>
+<br>
+<br>
+<h1><b><center><font face="open sans"><font color="#5AB9EA">Vision</font></font></center></b></h1>
+<ul>
+<li><b><center><font face="open sans"><font color="#5AB9EA">To allow users to choose their best devices without any technical problems that could happened.</font></font></center></b></li>
+</ul>
+<br>
+<br>
+<br>
+<br>
+<h1><b><center><font face="open sans"><font color="#5AB9EA">Objectives</font></font></center></b></h1>
+<ul>
+<li><b><center><font face="open sans"><font color="#5AB9EA">To provide details information about devices in order to gain users trusts.</font></font></center></b></li>
+<li><b><center><font face="open sans"><font color="#5AB9EA">To promote affordable and worthy price of devices to users.</font></font></center></b></li>
+<li><b><center><font face="open sans"><font color="#5AB9EA">To do our best in ensuring all of devices provided in our organizational does not commit any major technical problems.</font></font></center></b></li>
+</ul>
+<br>
+<br>
+<br>
+<br>
+               <!--Navigation bar-->
+               <div class="navbarr">
+                <ul>
+                    <li><a href="mailto:adamghaffar98@gmail.com"><center>Feedback and Recommendations</a></li></center>
+                </ul>
+            </div>
+            <br>
+            
+            <!--Footer-->
+            <div class="footer">
+                <div class="header">
+                    <center><marquee direction = "right"><h1>Leaderships Roles</h1></marquee></center>
+                </div>
+               <center>&copy; TECHOPEDIA 2021</center>
+               <embed src="audio/index.mp3" hidden="true"></embed>
+            </div>
+    </main>
+</body>
+
+</html>

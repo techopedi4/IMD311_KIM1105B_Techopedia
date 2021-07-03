@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contactus.css">
+  </head>
+  <body>
+       <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">TECHOPEDIA</label>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+	    <li><a href="bod.html">Leaderships</a></li>
+        <li><a href="typelaptop.html">Types of PC</a></li>
+        <li><a href="samsung.html">Types of Smartphones</a></li>
+        <li><a href="accessories.html">Accessories</a></li>
+	    <li><a class="active" href="#">Contact Us</a></li>
+
+      </ul>
+    </nav>
+
+
+    <!DOCTYPE html>
+    <html>
+    
+    <head>
+        <title>CONTACT</title>
+    
+        <script type="text/javascript">
+    
+            function checkboxCheck(theForm) {
+    
+                if (theForm.Agreement.checked == false) {
+                    alert('YOU MUST AGREE FOR THE TERMS AND CONDITIONS OF SENDING MESSAGE!');
+                    return false;
+                }
+    
+                else {
+                    return true;
+                }
+            }
+    
+            function submitForm() {
+                alert('YOUR MESSAGE HAS BEEN SENT!');
+                return true;
+            }
+    
+            setTimeout(function () {
+                document.getElementById("my_audio").play();
+            }, 3000)
+    
+        </script>
+    
+    </head>
+    
+    <link rel="stylesheet" type="text/css" href="stylee.css">
+    
+    <body>
+    
+        <div class="header">
+       
+    
+        <!--Content-->
+        <div class="content">
+    
+            <br />
+    
+            <div class="header">
+                <marquee direction = "right"><h1>REACH US NOW!</h1></marquee>
+            </div>
+    
+            <br />
+            <!--Fieldset of contact form-->
+            <fieldset style="color:gold">
+                <legend style="text-align:center"><b>CONTACT US FORM</legend></b> 
+    
+                <br />
+                <br />
+    
+                <section class="content-container">
+    
+                    <div class="contact-form">
+                        <form id="contact-form">
+                            <input name="name" type="text" class="form-control" placeholder="Full Name" style="color:black">
+                            <br>
+                            <input name="email" type="email" class="form-control" placeholder="Email" style="color:black">
+                            <br>
+                            <input name="address" type="text" class="form-control" placeholder="Address" style="color:black">
+                            <br>
+                            <textarea name="message" class="form-control" placeholder="Message" rows="4" style="color:black"></textarea>
+                            <br>
+                        </form>
+    
+                        <form id="contact-form" onclick="return checkboxCheck(this);" onsubmit="return submitForm(this);">
+                            <input type="checkbox" id="Agree1" name="Agreement" value="Agree">
+                            <label for="Agree1" style="color:orangered"><b>My message has no element of violence.</b></label><br>
+    
+                            <input name="submit" type="submit" class="form-control submit" value="SEND MESSAGE">
+                        </form>
+                    </div>
+    
+                </section>
+                <!--Contact link hover button-->
+                <section id="contact">
+    
+                   
+    
+                </section>
+                <br />
+            </fieldset>
+        </div>
+    
+        <!--Navigation bar-->
+        <div class="navbarr">
+            <ul>
+                <li><a href="mailto:adamghaffar98@gmail.com"><center>Feedback and Recommendations</a></li></center>
+            </ul>
+        </div>
+    
+        <!--Footer-->
+        <div class="footer">
+            &copy; TECHOPEDIA 2021
+        </div>
+    
+        <embed src="audio/other.mp3" hidden="true"></embed>
+    
+    </body>
+    </html>
+
+
